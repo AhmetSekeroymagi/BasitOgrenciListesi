@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Sınıf_Listesi_Oluşturma.Models.Ogrenci>
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<html >
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Öğrenciler</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <h1>Sınıf Listesi</h1>
+        <table class="table">
+            <tr class="bg-info">
+                <td>Id</td>
+                <td>No</td>
+                <td>Name</td>
+                <td>Yas</td>
+            </tr>
+            @foreach (var ogr in Model)
+            {
+                <tr>
+                    <td>@ogr.ogrId</td>
+                    <td>@ogr.ogrNo</td>
+                    <td>@ogr.ogrName</td>
+                    <td>@ogr.ogrYas</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
